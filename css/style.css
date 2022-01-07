@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main-color:#00b0ff;
+    --second-color:#a69999;
+    --third-color:#eceff1;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: thistle;
+}
+
+ul{
+    list-style: none;
+}
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.container{
+    width: 100%;
+}
+.chat-box{
+    display: flex;
+    width: 1000px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.chat-box .box1{
+    width: 40%;
+    padding: 20px;
+    border-right: 1px solid var(--third-color);
+
+}
+.chat-box .box1 .search{
+    padding:20px 0;
+    text-align: center;
+}
+.chat-box .box1 .search input{
+    border: none;
+    padding: 10px;
+    background-color: var(--third-color);
+    border-radius: 20px;
+    margin-right: 10px;
+    width: 250px;
+}
+.chat-box .box1 .search i{
+    background-color: var(--main-color);
+    background-size: 100px;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    margin: auto;
+}
+.chat-box .box1 .contacts{
+    padding: 30px 0;
+}
+.chat-box .box1 .contacts li{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--third-color);
+    padding: 0 10px;
+
+}
+.chat-box .box1 .contacts li .profile{
+    display: flex;
+    align-items: center;
+}
+.chat-box .box1 .contacts li p,.chat-box .box1 .contacts li .time{
+    color: var(--second-color);
+}
+.chat-box .box1 .contacts .active{
+    background-color: var(--main-color);
+    color: white;
+}
+.chat-box .box1 .contacts .active p,
+.chat-box .box1 .contacts .active .time
+{
+    color: white;
+}
+
+/* box2 */
+.chat-box .box2{
+    width: 60%;
+}
+.chat-box .box2 .sent-to p{
+    padding: 10px;
+    background-color: var(--third-color);
+    margin-bottom: 200px;
+}
+.chat-box .box2 .sent-to span{
+    font-weight: bold;
+}
+.chat-box .box2 .msgs{
+    padding: 30px;
+}
+.chat-box .box2 .sent-to h3{
+    text-align: center;
+    position: relative;
+}
+.chat-box .box2 .sent-to h3::before{
+    content: "";
+    background-color: var(--third-color);
+    height: 1px;
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+.chat-box .box2 .sent-to h3::after{
+    content: "";
+    background-color: var(--third-color);
+    height: 1px;
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+.chat-box .box2 .msgs{
+    position: relative;
+}
+.chat-box .box2 .msgs .active-msg{
+    background-color: var(--main-color);
+    padding: 20px;
+    margin:10px 0;
+    width: 50%;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    width: fit-content;
+}
+.chat-box .box2 .msgs .active-msg::before{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent var(--main-color) transparent transparent;
+    left: -20px;
+} 
+.chat-box .box2 .msgs .passive-msg{
+    background-color: var(--third-color);
+    padding: 20px;
+    margin:10px 0;
+    width: 50%;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+    text-align: right;
+    margin-left: 50%;
+    width: fit-content;
+}
+
+.chat-box .box2 .msgs .passive-msg::after{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px;
+    border-color: transparent transparent transparent var(--third-color);
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+} 
+
+.chat-box .box2 .msgs .sent-box{
+    width: 100%;
+    background-color: var(--third-color);
+    color: var(--second-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+.chat-box .box2 .msgs .sent-box input{
+    background-color: var(--third-color);
+    width: 80%;
+    padding: 5px;
+    border: none;
+}
+.chat-box .box2 .msgs .sent-box i{
+    font-size: 20px;
+    cursor: pointer;
+}
+.chat-box .box2 .msgs .sent-box i:hover{
+    color: var(--main-color);
+}
